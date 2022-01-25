@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de ordenamiento</title>
+</head>
+<body>
+    <script>
+
+//inicio es el arreglo de prueba
+let inicio = ["unacadena",3,9,1,10,500,1,10,true];
+let newArray = [];
+
+//Se filtran los numeros del arreglo inicio
+for (i= 0; i < inicio.length; i++){
+  if(typeof inicio[i] === "number"){
+    newArray.push(inicio[i]);
+  } 
+}
+
+//Funcion para el ordenamiento
+function ordenarNumeros (arreglo){
+    for (i=0; i< arreglo.length; i++){
+        for (j=i ; j < arreglo.length; j++){
+            if(arreglo[i]< arreglo[j]){
+            let x = arreglo[j];
+            arreglo[j] = arreglo[i];
+            arreglo[i] = x;
+        }
+        }
+
+
+    }
+    console.log(arreglo);
+}
+
+
+ordenarNumeros(newArray);
+
+
+    </script>
+</body>
+</html>

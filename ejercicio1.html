@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio serie Fibonacci</title>
+  </head>
+  <body>
+    <script>
+
+      //Ejercicio1. Serie Fibonacci
+      let fibonacci = [0, 1];
+
+      var numeroDeElementos = function fibonacciSequence(limit) {
+        for (let i = 2; i < limit; i++) {
+          fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+        }
+        return fibonacci;
+      }
+      
+      //Coloque el numero de elementos que desea obtener en la serie Fibonacci
+      console.log(numeroDeElementos(8));
+
+    </script>
+  </body>
+</html>
